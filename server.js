@@ -34,28 +34,18 @@ hbs.registerHelper('screamIt', (text) => {
 });
 
 app.get('/', (req, res) => {
-    //res.send('<h1>Hello Express</h1>');
     res.render('home.hbs', {
         welcomeMessage: 'Welcome to the Home Page',
         pageTitle: 'Home'
     });
-    // res.send({
-    //     name: 'Vin',
-    //     likes: [
-    //         'Football',
-    //         'Coding'
-    //     ]
-    // });
 });
 
 app.get('/about', (req, res) => {
-    //res.send('About Page...');
     res.render('about.hbs', {
         pageTitle: 'About Page'
     });
 });
 
-// /bad -- send back JSON with errorMessage property
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to get webpage.'
